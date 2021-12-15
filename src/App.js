@@ -3,7 +3,7 @@ import Login from './routes/Login'
 // import Index from './views/Index'
 // import Anchormachines from './views/anchormachines'
 import Dashboard from './routes/Dashboard'
-// import Machines from './views/authorised/machines'
+import Machines from './routes/Machines'
 // import AddMachines from './views/authorised/AddMachines'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { AuthProtectedRoute, NonAuthProtectedRoute } from './services/protectRoutes'
@@ -22,6 +22,7 @@ function App () {
           <AuthProtectedRoute path='/machines' exact component={Machines} />
           <AuthProtectedRoute path='/addmachine' exact component={AddMachines} /> */}
           <AuthProtectedRoute path='/dashboard' exact component={Dashboard} />
+          <AuthProtectedRoute path='/machines' exact component={Machines} />
           <Route path='*' component={Login} />
         </Switch>
       </section>
