@@ -6,10 +6,10 @@ function Content(props) {
     return (
         <div style={container}>
            <div style={leftContent}>
-            <div className='dashboard-title machines'>
-                All Machines
+            <div>
+                <span className='text-xl mr-2'>All Machines</span>
 
-                <span className='add-machine'>
+                <span className='rounded-lg drop-shadow-md hover:drop-shadow-lg text-slate-900 bg-slate-50 px-2 py-2 text-sm'>
                     <Link to='/addmachine'>+ Add Machine</Link>
                 </span>
             </div>

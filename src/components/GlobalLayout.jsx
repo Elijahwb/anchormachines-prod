@@ -4,9 +4,9 @@ import Top from './GlobalTopnav';
 
 function Layout(props) {
     return (
-        <section style={mainContainer}>
-            <Sidebar activeRoute={props.activeRoute} />
-            <section style={ mainContent }>
+        <section className='container grid sm:grid-cols-5 gap-4 bg-black sm:mx-0 sm:w-full'>
+            <Sidebar activeRoute={props.activeRoute}/>
+            <section style={ mainContent } className='container col-span-5'>
                 <Top />
                 <section className='left-content' style={otherContent}>
                     {props.content}
@@ -20,7 +20,6 @@ const mainContent = {
     background: '#f5f6fa',
     height: '100vh',
     width: '100%',
-    borderTopLeftRadius: '40px',
     overflowY: 'auto'
 }
 
@@ -33,7 +32,7 @@ const otherContent = {
 }
 
 const mainContainer = {
-    background: '#000000',
+    // background: '#000000',
     // background: 'var(--gray-nurse)',
     display: 'flex',
     height: '100vh',

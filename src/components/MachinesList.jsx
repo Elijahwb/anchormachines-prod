@@ -36,7 +36,7 @@ const MachineList = (props) =>{
             </div>
             {
                 allMachines.map((machine, index) => {
-                    return <div className='list-item' key={index}>
+                    return <div className='list-item hover:bg-yellow-50' key={index}>
                                 <div className='name-contents'>
                                     <div className='custom-avatar'>
                                         <img src={sampleImage}></img>

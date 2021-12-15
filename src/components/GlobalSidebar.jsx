@@ -28,7 +28,7 @@ function SideBar(props) {
         "active": props.activeRoute == 'chat',
     })
     return (
-        <section className='sidebar-container'>
+        <section className='sidebar-container hidden'>
             <Link to='/dashboard'><img className='sidebar-logo' src={Logo}></img></Link>
 
             <div className='sidebar-links'>

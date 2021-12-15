@@ -53,9 +53,9 @@ function Top(props) {
     }
 
     return (
-        <div className='top-section'>
+        <div className='top-section container px-5 py-2 flex justify-between sm:py-5'>
             <div className='welcome-message'>
-                Welcome Back! <span>{user.first_name} {user.last_name}</span>
+                <span className='hidden'>Welcome Back!</span> <span className='font-semibold'>{user.first_name} {user.last_name}</span>
             </div>
 
             {/* <div className='profile-area'>
@@ -74,7 +74,7 @@ function Top(props) {
                     <i className='fas fa-bell'></i>
                 </div>
                 <div className='actions'>
-                    <img className='profile-image' src={profile}></img>
+                    <img className='inline-block ring-2 ring-white' src={profile}></img>
                     <div className={showProfileMenu}>
                         <div className='account-item' onClick={ hideProfile }>{user.email}</div>
                         <div className='account-item' onClick={ hideProfile }>Setting</div>
