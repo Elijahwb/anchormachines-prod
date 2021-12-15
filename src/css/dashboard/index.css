@@ -146,27 +146,10 @@
     cursor: pointer;
 }
 
-.dashboard-recent-activities-container {
-    margin-top: 40px;
-}
-
-.dashboard-recent-activities-container .heading {
-    font-size: 26px;
-    font-weight: bold;
-}
-
-.dashboard-recent-activities-container .content {
-    margin-top: 20px;
-}
-
 .dashboard-recent-activities-container .controls {
     /* display: flex; */
     /* justify-content: space-between; */
     border-bottom: 2px solid #ccd2db;
-}
-
-.dashboard-recent-activities-container .tabs {
-    display: flex;
 }
 
 .dashboard-recent-activities-container .tabs div {
@@ -176,13 +159,9 @@
 }
 
 .dashboard-recent-activities-container .tabs div.active {
-    border-bottom: 4px solid #707070;
+    /* border-bottom: 4px solid #707070; */
+    border-bottom: 4px solid var(--candlelight);
     font-weight: bold;
-}
-
-.dashboard-recent-activities-container .activities-list {
-    /* height: 300px; */
-    margin-top: 20px;
 }
 
 .hide {

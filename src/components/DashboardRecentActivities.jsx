@@ -85,10 +85,10 @@ function RecentActivities () {
   })
 
   return (
-    <div className='dashboard-recent-activities-container'>
+    <div className='dashboard-recent-activities-container my-5'>
       <div className='dashboard-title'>Machine Requests</div>
 
-      <div className='content'>
+      <div className='content my-4'>
         <div className='controls flex justify-between'>
           <div className='tabs flex'>
             <div className={allActive + ' mr-3'} onClick={() => changeActiveTab('all')}>All</div>
