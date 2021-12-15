@@ -146,42 +146,6 @@
     cursor: pointer;
 }
 
-.dashboard-more-info-container .more-info-item .icon-area {
-    /* width: 80px;
-    height: 80px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ccd2db;
-    border-radius: 8px;
-    padding: 5px;
-    color: #ffffff;
-    font-size: 50px;
-}
-
-.dashboard-more-info-container .more-info-item:hover {
-    font-weight: bold;
-}
-
-.dashboard-more-info-container .more-info-item:hover .icon-area {
-    background: var(--candlelight);
-}
-
-.dashboard-more-info-container .more-info-item .info-details-area {
-    margin-left: 10px;
-    font-weight: inherit;
-}
-
-.dashboard-more-info-container .more-info-item .info-details-area div:first-child {
-    font-size: 30px;
-    font-weight: inherit;
-}
-
-.dashboard-more-info-container .more-info-item .info-details-area div:last-child {
-    font-size: 13px;
-    color:rgba(0,0,0, .9);
-}
-
 .dashboard-recent-activities-container {
     margin-top: 40px;
 }
@@ -196,8 +160,8 @@
 }
 
 .dashboard-recent-activities-container .controls {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
     border-bottom: 2px solid #ccd2db;
 }
 
@@ -206,8 +170,8 @@
 }
 
 .dashboard-recent-activities-container .tabs div {
-    padding: 10px 25px;
-    font-size: 17px;
+    /* padding: 10px 25px; */
+    /* font-size: 17px; */
     cursor: pointer;
 }
 

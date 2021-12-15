@@ -58,7 +58,8 @@ function RecentActivities () {
 
   const newActive = classNames({
     history: true,
-    active: activeTab === 'new'
+    active: activeTab === 'new',
+    'border-b-3 border-yellow-400': activeTab === 'new',
   })
   const newHide = classNames({
     history: true,
@@ -85,16 +86,14 @@ function RecentActivities () {
 
   return (
     <div className='dashboard-recent-activities-container'>
-      <div className='heading'>Recent Activity / Tasks</div>
+      <div className='dashboard-title'>Machine Requests</div>
 
       <div className='content'>
-        <div className='controls'>
-          <div className='tabs'>
-            <div className={allActive} onClick={() => changeActiveTab('all')}>All Requests</div>
-            <div className={newActive} onClick={() => changeActiveTab('new')}>New Requests</div>
-            <div className={acceptedActive} onClick={() => changeActiveTab('accepted')}>Accepted Requests</div>
-            <div className={declinedActive} onClick={() => changeActiveTab('declined')}>Declined Requests</div>
-          </div>
+        <div className='controls flex justify-between'>
+          <div className='tabs flex'>
+            <div className={allActive + ' mr-3'} onClick={() => changeActiveTab('all')}>All</div>
+            <div className={newActive + ' mr-3'} onClick={() => changeActiveTab('new')}>New</div>
+            <div className={acceptedActive + ' mr-3'} onClick={() => changeActiveTab('accepted')}>Accepted</div>          </div>
           <div className='date-filter'>6. Sep. 2020 - 8. Nov. 2020</div>
         </div>
         {

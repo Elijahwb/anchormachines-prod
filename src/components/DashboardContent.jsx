@@ -10,7 +10,7 @@ function Content(props) {
            <div style={leftContent}>
             <div className='dashboard-title'>Overview</div> 
 
-            <div className='grid sm:grid-cols-3 gap-4 my-2'>
+            <div className='grid gap-4 my-2 sm:grid-cols-3'>
                 <InfoCard />
                 <InfoCard />
                 <InfoCard />
