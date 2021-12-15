@@ -1,0 +1,51 @@
+.registration-form-content-1 {
+    min-width: 50%;
+    border-radius: 50px;
+    /* background-image: url(../img/anchor-login.png); */
+    background-position: 75% 50%;
+	background-size: cover;
+    height: 100%;
+}
+
+
+.registration-form-content-2 {
+    padding: 3rem 5rem;
+    margin: 0 auto;
+
+}
+
+.registration-form-row {
+    display: block;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.error-input-field {
+    border: 1px solid crimson !important;
+}
+.hidden {
+    display: none;
+}
+
+.show-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* mobile screens */
+@media only screen and (max-width: 600px) {
+    .registration-form-content-1 {
+        display: none;
+    }
+
+    .registration-form-content-2 {
+
+        width: 90%;
+        padding: 3rem 2rem;
+        margin: 0 auto;
+    
+    }
+
+}

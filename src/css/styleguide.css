@@ -1,0 +1,188 @@
+:root { 
+  --banana: #fed730;
+  --black: #040405;
+  --black-2: #000000;
+  --storm-dust: #626262;
+
+  --candlelight: #ffcc17;
+  --gray-nurse: #eae8e8;
+  --white: #ffffff;
+ 
+  --font-size-l: 16px;
+  --font-size-m: 13px;
+  --font-size-s: 9px;
+  --font-size-xl: 17px;
+  --font-size-xxl: 20px;
+  --font-size-xxxl: 26px;
+  --font-size-xxxxl: 39px;
+ 
+  --font-family-playfair_display: "Playfair Display", Helvetica;
+  --font-family-sofiapro-bold: "SofiaPro-Bold", Helvetica;
+  --font-family-sofiapro-medium: "SofiaPro-Medium", Helvetica;
+  --font-family-sofiapro-regular: "SofiaPro-Regular", Helvetica;
+}
+.playfairdisplay-bold-black-20px {
+  color: var(--black-2);
+  font-family: var(--font-family-playfair_display);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.playfairdisplay-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-playfair_display);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.playfairdisplay-bold-black-28px {
+  color: var(--black-2);
+  font-family: var(--font-family-playfair_display);
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.playfairdisplay-black-black-23px {
+  color: var(--black-2);
+  font-family: var(--font-family-playfair_display);
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.playfairdisplay-normal-black-13px {
+  color: var(--black);
+  font-family: var(--font-family-playfair_display);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.playfairdisplay-normal-black-13px-2 {
+  color: var(--black-2);
+  font-family: var(--font-family-playfair_display);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sofiapro-bold-black-17px {
+  color: var(--black-2);
+  font-family: var(--font-family-sofiapro-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.sofiapro-regular-normal-black-16px {
+  color: var(--black-2);
+  font-family: var(--font-family-sofiapro-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sofiapro-regular-normal-black-9px {
+  color: var(--black-2);
+  font-family: var(--font-family-sofiapro-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.playfairdisplay-bold-black-26px {
+  color: var(--black);
+  font-family: var(--font-family-playfair_display);
+  font-size: var(--font-size-xxxl);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.playfairdisplay-bold-black-37px {
+  color: var(--black);
+  font-family: var(--font-family-playfair_display);
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.playfairdisplay-black-candlelight-39px {
+  color: var(--candlelight);
+  font-family: var(--font-family-playfair_display);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.playfairdisplay-bold-black-15px {
+  color: var(--black);
+  font-family: var(--font-family-playfair_display);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.playfairdisplay-bold-black-18px {
+  color: var(--black);
+  font-family: var(--font-family-playfair_display);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.playfairdisplay-normal-black-19px {
+  color: var(--black-2);
+  font-family: var(--font-family-playfair_display);
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.playfairdisplay-normal-white-26px {
+  color: var(--white);
+  font-family: var(--font-family-playfair_display);
+  font-size: var(--font-size-xxxl);
+}
+
+.playfairdisplay-bold-white-26px {
+  color: var(--white);
+  font-family: var(--font-family-playfair_display);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.playfairdisplay-normal-white-12px {
+  color: var(--white);
+  font-family: var(--font-family-playfair_display);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.playfairdisplay-normal-white-13px {
+  color: var(--white);
+  font-family: var(--font-family-playfair_display);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.playfairdisplay-normal-storm-dust-11px {
+  color: var(--storm-dust);
+  font-family: var(--font-family-playfair_display);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sofiapro-medium-black-13px {
+  color: var(--black);
+  font-family: var(--font-family-sofiapro-medium);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}

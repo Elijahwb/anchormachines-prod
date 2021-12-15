@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from './routes/Login'
+// import Register from './views/Register'
+// import Index from './views/Index'
+// import Anchormachines from './views/anchormachines'
+// import Dashboard from './views/authorised/dashboard'
+// import Machines from './views/authorised/machines'
+// import AddMachines from './views/authorised/AddMachines'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+// import { AuthProtectedRoute, NonAuthProtectedRoute } from './services/protectRoutes'
+import { appHistory } from './services/routeHistory'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router history={appHistory}>
+      <section>
+        <Switch>
+          <Route path='/login' exact component={Login} />
+          {/* <NonAuthProtectedRoute path='/register' exact component={Register} />
+          <AuthProtectedRoute path='/' exact component={Index} />
+          <AuthProtectedRoute path='/anchormachines' exact component={Anchormachines} />
+          <AuthProtectedRoute path='/dashboard' exact component={Dashboard} />
+          <AuthProtectedRoute path='/machines' exact component={Machines} />
+          <AuthProtectedRoute path='/addmachine' exact component={AddMachines} /> */}
+          <Route path='*' component={Login} />
+        </Switch>
+      </section>
+    </Router>
+  )
 }
 
-export default App;
+export default App
