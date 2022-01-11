@@ -55,94 +55,94 @@ function AddForm(props) {
     return (
         <div className='container'>
             <form action="" className='container text-sm' autoComplete='off'>
-                <div className='font-medium my-5 pb-5 uppercase text-lg'>
+                <div className='font-medium my-5 uppercase text-lg text-[#2e4765]' style={{'border-bottom': '1px solid gray'}}>
                     New Machine
                 </div>
 
-                <div className='grid grid-cols-3 gap-4 my-4'>
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                <div className='grid grid-cols-3 gap-4 my-4 pt-5'>
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Machine Name
                         </span>
-                        <input type="text" name="email" class="machine-name mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine name" required />
+                        <input type="text" name="email" className="machine-name mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine name" required />
                     </label>
 
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Model Name
                         </span>
-                        <input type="text" name="email" class="machine-model-name mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="machine model name" required />
+                        <input type="text" name="email" className="machine-model-name mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="machine model name" required />
                     </label>
 
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Make
                         </span>
-                        <input type="text" name="email" class="machine-make mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine make" required />
+                        <input type="text" name="email" className="machine-make mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine make" required />
                     </label>
                 </div>
 
                 <div className='grid grid-cols-3 gap-4 my-4'>
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Type
                         </span>
-                        <input type="text" name="email" class="machine-type mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine type" required />
+                        <input type="text" name="email" className="machine-type mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine type" required />
                     </label>
 
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Tracker type
                         </span>
-                        <input type="text" name="email" class="machine-tracker-type mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker type" required />
+                        <input type="text" name="email" className="machine-tracker-type mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker type" required />
                     </label>
 
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Tracker IMEI
                         </span>
-                        <input type="text" name="email" class="machine-tracker-imei mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker IMEI" required />
+                        <input type="text" name="email" className="machine-tracker-imei mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker IMEI" required />
                     </label>
                 </div>
 
                 <div className='grid grid-cols-3 gap-4 my-4'>
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Tracker SIM
                         </span>
-                        <input type="text" name="email" class="machine-tracker-sim mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker SIM" required />
+                        <input type="text" name="email" className="machine-tracker-sim mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker SIM" required />
                     </label>
 
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Number plate
                         </span>
-                        <input type="text" name="email" class="machine-number-plate mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine number plate" required />
+                        <input type="text" name="email" className="machine-number-plate mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine number plate" required />
                     </label>
 
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Log book
                         </span>
-                        <input type="text" name="email" class="machine-log-book mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Mahine log book" required />
+                        <input type="text" name="email" className="machine-log-book mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Mahine log book" required />
                     </label>
                 </div>
 
                 <div className='grid grid-cols-3 gap-4 my-4'>
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Price
                         </span>
-                        <input type="text" name="email" class="machine-price mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="" required />
+                        <input type="text" name="email" className="machine-price mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="" required />
                     </label>
                 </div>
 
                 <div className='grid my-4'>
-                    <label class="block w-full">
-                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                         Terms and Conditions
                         </span>
-                        <textarea rows={5} type="text" name="email" class="terms-and-conditions mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Terms and conditions" required />
+                        <textarea rows={5} type="text" name="email" className="terms-and-conditions resize-none mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Terms and conditions" required />
                     </label>
                 </div>
 

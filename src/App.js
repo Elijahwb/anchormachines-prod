@@ -5,7 +5,7 @@ import Login from './routes/Login'
 import Dashboard from './routes/Dashboard'
 import Machines from './routes/Machines'
 import AddMachines from './routes/AddMachine'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Router, Switch, Route } from 'react-router-dom'
 import { AuthProtectedRoute, NonAuthProtectedRoute } from './services/protectRoutes'
 import { appHistory } from './services/routeHistory'
 
