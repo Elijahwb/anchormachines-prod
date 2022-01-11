@@ -25,15 +25,15 @@ const MachineList = (props) =>{
     }
 
     return (
-        <div className='min-h-[83vh] w-full shadow-lg text-gray-700'>
-            <table className='w-full overflow-x-auto'>
-                <tr className='font-semibold border-gray-800' style={{'border-bottom': '1px solid gray'}}>
+        <div className='min-h-[83vh] w-full shadow-lg text-gray-700 rounded-t-md bg-white'>
+            <table className='w-full overflow-x-auto rounded-t-md'>
+                <tr className='font-semibold border-gray-800 rounded-t-md' style={{'border-bottom': '1px solid gray', 'border-top': '1px solid gray'}}>
                     {/* <td>Photo</td> */}
-                    <td className='py-2.5 pl-2'>Name</td>
-                    <td className='py-2.5'>Number plate</td>
-                    <td className='py-2.5'>Price</td>
-                    <td className='py-2.5'>Location</td>
-                    <td className='py-2.5'>Status</td>
+                    <td className='py-3 pl-2'>Name</td>
+                    <td className='py-3'>Number plate</td>
+                    <td className='py-3'>Price</td>
+                    <td className='py-3'>Location</td>
+                    <td className='py-3'>Status</td>
                 </tr>
 
                 {
