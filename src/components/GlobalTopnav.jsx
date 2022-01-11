@@ -74,7 +74,7 @@ function Top(props) {
                     <i className='fas fa-bell'></i>
                 </div>
                 <div className='actions'>
-                    <img className='inline-block ring-2 ring-white' src={profile}></img>
+                    <img className='inline-block ring-2 ring-white' src={profile} alt=''></img>
                     <div className={showProfileMenu}>
                         <div className='account-item' onClick={ hideProfile }>{user.email}</div>
                         <div className='account-item' onClick={ hideProfile }>Setting</div>
