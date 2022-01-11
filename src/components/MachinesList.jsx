@@ -23,54 +23,84 @@ const MachineList = (props) =>{
         .catch( err => console.log(err))
         .finally(async ()=> console.log('All is finally done'))
     }
+
     return (
-        <div className='machines-list'>
-            <div className='list-item heading'>
-                <div className='name-contents heading'>
-                    Name
-                </div>
-                <div className='location heading'>Location</div>
-                <div className='status heading'>
-                    Access
-                </div>
-            </div>
-            {
-                allMachines.map((machine, index) => {
-                    return <div className='list-item hover:bg-yellow-50' key={index}>
-                                <div className='name-contents'>
-                                    <div className='custom-avatar'>
-                                        <img src={sampleImage}></img>
-                                    </div>
-                                    <div className='info'>
-                                        <span className='name'><small>{machine.machine_name ? machine.machine_name : 'NaN'}</small></span>
-                                        <span><small>{machine.machine_number_plate ? machine.machine_number_plate: 'NaN'}</small></span>
-                                        <span><small>UGX{machine.price} - Day</small></span>
-                                    </div>
-                                </div>
-                                <div className='location'>{machine.location}</div>
-                                <div className='status'>
-                                    <button>Active</button>
-                                </div>
-                            </div>
-                })
-            }
+        <div className='min-h-[83vh] w-full shadow-lg text-gray-700'>
+            <table className='w-full overflow-x-auto'>
+                <tr className='font-semibold border-gray-800' style={{'border-bottom': '1px solid gray'}}>
+                    {/* <td>Photo</td> */}
+                    <td className='py-2.5 pl-2'>Name</td>
+                    <td className='py-2.5'>Number plate</td>
+                    <td className='py-2.5'>Price</td>
+                    <td className='py-2.5'>Location</td>
+                    <td className='py-2.5'>Status</td>
+                </tr>
 
-            {
-                noMachines && allMachines.length == 0 
-                ? <div style={loadingSection}>No Machines Available</div>
-                : null
-            }
-
-            {
-                loading 
-                ? <div style={loadingSection}>
-                    <Loader />
-                    <div>Fetching machines...</div>
-                </div>
-                : null
-            }
+                {
+                    allMachines.map((machine, index) => {
+                        return (
+                            <tr key={index} style={{'border-bottom': '1px solid #dfdbdb'}} className='cursor-pointer hover:shadow-md'>
+                                {/* <td className='pr-1'><img className='w-20 object-cover' src={sampleImage} alt='Machine'></img></td> */}
+                                <td className='py-4 pl-2'>{machine.machine_name ? machine.machine_name : 'NaN'}</td>
+                                <td className='py-4'>{machine.machine_number_plate ? machine.machine_number_plate: 'NaN'}</td>
+                                <td className='py-4'>UGX {machine.price} - Day</td>
+                                <td className='py-4'>{machine.location}</td>
+                                <td className='py-4'>Active</td>
+                            </tr>
+                        )
+                    })
+                }
+            </table>
         </div>
     );
+    // return (
+    //     <div className='machines-list'>
+    //         <div className='list-item heading'>
+    //             <div className='name-contents heading'>
+    //                 Name
+    //             </div>
+    //             <div className='location heading'>Location</div>
+    //             <div className='status heading'>
+    //                 Access
+    //             </div>
+    //         </div>
+    //         {
+    //             allMachines.map((machine, index) => {
+    //                 return <div className='list-item hover:bg-yellow-50' key={index}>
+    //                             <div className='name-contents'>
+    //                                 <div className='custom-avatar'>
+    //                                     <img src={sampleImage}></img>
+    //                                 </div>
+    //                                 <div className='info'>
+    //                                     <span className='name'><small>{machine.machine_name ? machine.machine_name : 'NaN'}</small></span>
+    //                                     <span><small>{machine.machine_number_plate ? machine.machine_number_plate: 'NaN'}</small></span>
+    //                                     <span><small>UGX{machine.price} - Day</small></span>
+    //                                 </div>
+    //                             </div>
+    //                             <div className='location'>{machine.location}</div>
+    //                             <div className='status'>
+    //                                 <button>Active</button>
+    //                             </div>
+    //                         </div>
+    //             })
+    //         }
+
+    //         {
+    //             noMachines && allMachines.length == 0 
+    //             ? <div style={loadingSection}>No Machines Available</div>
+    //             : null
+    //         }
+
+    //         {
+    //             loading 
+    //             ? <div style={loadingSection}>
+    //                 <Loader />
+    //                 <div>Fetching machines...</div>
+    //             </div>
+    //             : null
+    //         }
+    //     </div>
+    // );
 }
 
 const loadingSection = {

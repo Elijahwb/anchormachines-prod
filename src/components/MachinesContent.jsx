@@ -5,16 +5,15 @@ import Machinelist from './MachinesList';
 function Content(props) {
     return (
         <div style={container}>
-           <div style={leftContent}>
-            <div>
-                <span className='text-xl mr-2'>All Machines</span>
+           <div style={leftContent} className='text-sm'>
+                <div className='font-medium mt-5 pb-2 uppercase text-lg text-[#2e4765] flex items-end justify-between' style={{'border-bottom': '1px solid transparent'}}>
+                    <div>All Machines</div>
+                    <div className='bg-yellow-400 drop-shadow-md hover:drop-shadow-lg text-slate-900 px-2 py-2 text-sm'>
+                        <Link to='/addmachine'>+ Add Machine</Link>
+                    </div>
+                </div>
 
-                <span className='rounded-lg drop-shadow-md hover:drop-shadow-lg text-slate-900 bg-slate-50 px-2 py-2 text-sm'>
-                    <Link to='/addmachine'>+ Add Machine</Link>
-                </span>
-            </div>
-
-            <Machinelist />
+                <Machinelist />
            </div>
         </div>
     );
