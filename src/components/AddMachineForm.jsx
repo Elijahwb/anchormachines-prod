@@ -53,75 +53,107 @@ function AddForm(props) {
     }
 
     return (
-        <div className='register-machine-container'>
-            <form action="">
-                <div className='dashboard-title machines' style={{display: 'flex', justifyContent:'center'}}>
+        <div className='container'>
+            <form action="" className='container text-sm' autoComplete='off'>
+                <div className='font-medium my-5 pb-5 uppercase text-lg'>
                     New Machine
                 </div>
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Machine Name <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter your email</small></span> </label>
-                        <input className='machine-name'  type="text" name="" placeholder="Enter machine name" />
-                    </div>
+
+                <div className='grid grid-cols-3 gap-4 my-4'>
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Machine Name
+                        </span>
+                        <input type="text" name="email" class="machine-name mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine name" required />
+                    </label>
+
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Model Name
+                        </span>
+                        <input type="text" name="email" class="machine-model-name mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="machine model name" required />
+                    </label>
+
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Make
+                        </span>
+                        <input type="text" name="email" class="machine-make mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine make" required />
+                    </label>
                 </div>
 
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Machine model name <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter your password</small></span></label>
-                        <input className='machine-model-name' type="text" name="" placeholder="Enter model name"/>
-                    </div>
+                <div className='grid grid-cols-3 gap-4 my-4'>
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Type
+                        </span>
+                        <input type="text" name="email" class="machine-type mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine type" required />
+                    </label>
+
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Tracker type
+                        </span>
+                        <input type="text" name="email" class="machine-tracker-type mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker type" required />
+                    </label>
+
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Tracker IMEI
+                        </span>
+                        <input type="text" name="email" class="machine-tracker-imei mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker IMEI" required />
+                    </label>
                 </div>
 
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Machine make <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter Machine Make</small></span></label>
-                        <input className='machine-make' type="text" name="" placeholder="Enter make"/>
-                    </div>
+                <div className='grid grid-cols-3 gap-4 my-4'>
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Tracker SIM
+                        </span>
+                        <input type="text" name="email" class="machine-tracker-sim mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker SIM" required />
+                    </label>
+
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Number plate
+                        </span>
+                        <input type="text" name="email" class="machine-number-plate mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine number plate" required />
+                    </label>
+
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Log book
+                        </span>
+                        <input type="text" name="email" class="machine-log-book mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Mahine log book" required />
+                    </label>
                 </div>
 
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Machine type <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter Machine type</small></span></label>
-                        <input className='machine-type' type="text" name="" placeholder="Enter machine type"/>
-                    </div>
+                <div className='grid grid-cols-3 gap-4 my-4'>
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Price
+                        </span>
+                        <input type="text" name="email" class="machine-price mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="" required />
+                    </label>
                 </div>
 
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Machine tracker type <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter Machine tracker type</small></span></label>
-                        <input className='machine-tracker-type' type="text" name="" placeholder="Enter tracker type"/>
-                    </div>
+                <div className='grid my-4'>
+                    <label class="block w-full">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                        Terms and Conditions
+                        </span>
+                        <textarea rows={5} type="text" name="email" class="terms-and-conditions mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Terms and conditions" required />
+                    </label>
                 </div>
 
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Machine tracker IMEI <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter Machine tracker IMEI</small></span></label>
-                        <input className='machine-tracker-imei' type="text" name="" placeholder="Enter tracker IMEI"/>
-                    </div>
+                <div className='grid my-4'>
+                    <button type='submit'style={submit} className="bg-yellow-400 py-2.5 uppercase"
+                        onClick={ registerMachine }>
+                        {loading ? 'Loading...' : 'Add Machine'}
+                    </button>
                 </div>
 
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Machine tracker SIM <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter Machine tracker SIM</small></span></label>
-                        <input className='machine-tracker-sim' type="text" name="" placeholder="Enter tracker SIM"/>
-                    </div>
-                </div>
-
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Number Plate <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter machine number plate</small></span> </label>
-                        <input className='machine-number-plate' type="text" name="" placeholder="Enter number plate" />
-                    </div>
-                </div>
-
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Log Book <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter machine Log Book</small></span> </label>
-                        <input className='machine-log-book' type="text" name="" placeholder="Enter log book" />
-                    </div>
-                </div>
-
-                <div className="registration-form-row">
+                {/* <div className="registration-form-row">
                     <div className="registration-form-item">
                         <label className="playfairdisplay-bold-black-15px">Machine Location <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter machine Location</small></span> </label>
                         <input className='machine-location' type="text" name="" placeholder="Enter machine location" />
@@ -140,30 +172,7 @@ function AddForm(props) {
                         <label className="playfairdisplay-bold-black-15px">Location Longitude <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter machine Location Longitude</small></span> </label>
                         <input className='machine-location-lon' type="text" name="" placeholder="Enter machine location longitude" />
                     </div>
-                </div>
-
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Price <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter Price</small></span> </label>
-                        <input className='machine-price' type="number" name="" placeholder="Enter price" />
-                    </div>
-                </div>
-
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <label className="playfairdisplay-bold-black-15px">Terms and Conditions <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter Terms and Conditions</small></span> </label>
-                        <input className='terms-and-conditions' rows={8}/>
-                    </div>
-                </div>
-
-                <div className="registration-form-row">
-                    <div className="registration-form-item">
-                        <button type='submit'style={submit} className="login-button"
-                        onClick={ registerMachine }>
-                            {loading ? 'Loading...' : 'Add Machine'}
-                        </button>
-                    </div> 
-                </div>
+                </div> */}
 
                 {
                     loading ?

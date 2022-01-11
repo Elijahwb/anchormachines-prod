@@ -115,14 +115,14 @@ a {
 }
 
 /* STYLINGS FOR THE ADD MACHINE PAGE*/
-.register-machine-container {
+/* .register-machine-container {
     width: 100%;
     display: flex;
     justify-content: center;
     min-height: 83vh;
     margin-top: 40px;
     border-radius: 10px;
-}
+} */
 .register-machine-container form {
     width: 50%;
     padding: 20px 30px;
