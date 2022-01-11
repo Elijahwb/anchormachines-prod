@@ -59,7 +59,7 @@ function AddForm(props) {
                     New Machine
                 </div>
 
-                <div className='grid grid-cols-3 gap-4 my-4 pt-5'>
+                <div className='grid md:grid-cols-3 gap-4 my-4 pt-5'>
                     <label className="block w-full">
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Machine Name
@@ -82,7 +82,7 @@ function AddForm(props) {
                     </label>
                 </div>
 
-                <div className='grid grid-cols-3 gap-4 my-4'>
+                <div className='grid md:grid-cols-3 gap-4 my-4'>
                     <label className="block w-full">
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Type
@@ -105,7 +105,7 @@ function AddForm(props) {
                     </label>
                 </div>
 
-                <div className='grid grid-cols-3 gap-4 my-4'>
+                <div className='grid md:grid-cols-3 gap-4 my-4'>
                     <label className="block w-full">
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Tracker SIM
@@ -128,7 +128,7 @@ function AddForm(props) {
                     </label>
                 </div>
 
-                <div className='grid grid-cols-3 gap-4 my-4'>
+                <div className='grid md:grid-cols-3 gap-4 my-4'>
                     <label className="block w-full">
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Price
