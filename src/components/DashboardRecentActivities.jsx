@@ -85,15 +85,15 @@ function RecentActivities () {
   })
 
   return (
-    <div className='dashboard-recent-activities-container my-5'>
-      <div className='dashboard-title'>Machine Requests</div>
+    <div className='dashboard-recent-activities-container my-5 text-sm font-medium'>
+      <div className='font-medium text-lg'>Machine Requests</div>
 
-      <div className='content my-4'>
+      <div className='content my-5 py-2'>
         <div className='controls flex justify-between'>
           <div className='tabs flex'>
-            <div className={allActive + ' mr-3'} onClick={() => changeActiveTab('all')}>All</div>
-            <div className={newActive + ' mr-3'} onClick={() => changeActiveTab('new')}>New</div>
-            <div className={acceptedActive + ' mr-3'} onClick={() => changeActiveTab('accepted')}>Accepted</div>          </div>
+            <div className={allActive + ' px-5'} onClick={() => changeActiveTab('all')}>All</div>
+            <div className={newActive + ' px-5 text center'} onClick={() => changeActiveTab('new')}>New</div>
+            <div className={acceptedActive + ' px-5 text center'} onClick={() => changeActiveTab('accepted')}>Accepted</div>          </div>
           <div className='date-filter'>6. Sep. 2020 - 8. Nov. 2020</div>
         </div>
         {
@@ -106,7 +106,7 @@ function RecentActivities () {
         {
           (!loading && allMachineRequests.length === 0) &&
             <div style={loadingSection}>
-              <div>No Machine requests</div>
+              <div className='text-gray-400'>No Machine requests</div>
             </div>
         }
         {

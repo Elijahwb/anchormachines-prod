@@ -2,7 +2,7 @@ import React from 'react';
 
 function MoreInfo(props) {
     return (
-        <div className='dashboard-more-info-container my-5 gap-4 grid grid-cols-4 sm:grid-cols-3  md:grid-cols-4'>
+        <div className='dashboard-more-info-container my-5 py-5 gap-4 grid grid-cols-4 sm:grid-cols-3  md:grid-cols-4'>
             
             <div className='more-info-item border-r-2 border-yellow-300 text-black shadow-lg pb-1' style={{'border-right': '3px solid green'}}>
                 <div className='icon-area flex justify-center align-middle py-3'><i className='fab fa-telegram-plane'></i></div>
