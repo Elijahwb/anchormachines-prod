@@ -21,7 +21,7 @@ function Layout(props) {
     }
 
     return (
-        <section className='container grid sm:grid-cols-5 gap-4 sm:mx-auto'>
+        <section className='container flex grid-cols-5 gap-4 sm:mx-auto'>
             <Sidebar activeRoute={props.activeRoute}/>
             <section style={ mainContent } className='container col-span-5'>
                 <Top />
