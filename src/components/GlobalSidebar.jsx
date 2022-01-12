@@ -32,7 +32,7 @@ function SideBar(props) {
         "text-yellow-400": currentRoute === 'dashboard',
     })
     let activeRouteMachinery = classNames({
-        "text-yellow-400": currentRoute === 'machines',
+        "text-yellow-400": currentRoute === 'machines' || currentRoute === 'addmachine',
     })
     let activeRouteTransactions = classNames({
         "text-yellow-400": currentRoute === 'transactions',

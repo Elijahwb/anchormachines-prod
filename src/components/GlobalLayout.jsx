@@ -18,6 +18,7 @@ function Layout(props) {
     const location = useLocation()
     function getCurrentRoute() {
         setCurrentRoute(location.pathname)
+        console.log(location)
     }
 
     return (
@@ -29,8 +30,11 @@ function Layout(props) {
                     currentRoute !== '/dashboard' ?
                     (
                         <div onClick={back} className='px-5 flex items-center cursor-pointer text-gray-500'>
-                            <span className='hover:opacity-80 text-yellow-500 underline'>Dashboard</span>
-                            <span className='ml-1 capitalize font-medium'>/ {currentRoute.substring(1)}</span>
+                            <span className='hover:opacity-80'>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                                </svg>
+                            </span>
                         </div>
                     ):
                     null
