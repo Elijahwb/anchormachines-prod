@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+import { useHistory } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 
 // Importing the anchormachines logo
@@ -12,34 +13,35 @@ function SideBar(props) {
 
     const location = useLocation()
 
-    useEffect(()=> {
-        console.log('location value')
-        console.log(props.location)
-    },)
+    const history = useHistory() 
 
-    function getCurrentRoute() {
-        setCurrentRoute(location.pathname.substring(1))
+   useEffect(() => {
+    getCurrentRoute(location)
+      return history.listen((location) => { 
+            console.log(`You changed the page to: ${location.pathname}`)
+            getCurrentRoute(location)
+      }) 
+   },)
+
+    async function getCurrentRoute(location) {
+        console.log(location.pathname)
+        await setCurrentRoute(location.pathname.substring(1))
     }
 
     let activeRouteDashboard = classNames({
-        "text-yellow-400": true,
-        "active": currentRoute === 'dashboard',
+        "text-yellow-400": currentRoute === 'dashboard',
     })
     let activeRouteMachinery = classNames({
-        "sidebar-link": true,
-        "active": currentRoute === 'machines',
+        "text-yellow-400": currentRoute === 'machines',
     })
     let activeRouteTransactions = classNames({
-        "sidebar-link": true,
-        "active": currentRoute === 'transactions',
+        "text-yellow-400": currentRoute === 'transactions',
     })
     let activeRouteNotifications = classNames({
-        "sidebar-link": true,
-        "active": currentRoute === 'notifications',
+        "text-yellow-400": currentRoute === 'notifications',
     })
     let activeRouteChat = classNames({
-        "sidebar-link": true,
-        "active": currentRoute === 'chat',
+        "text-yellow-400": currentRoute === 'chat',
     })
     return (
         <section className='min-w-[200px] h-[100vh] text-white bg-black'>

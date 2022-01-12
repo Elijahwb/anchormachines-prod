@@ -18,7 +18,7 @@ function RecentActivities () {
 
   async function machineRequests () {
     // Fetch machines
-    await axios.get('https://ancher-machine.herokuapp.com/machines/web_machine_requests', headers())
+    await axios.get('https://ancher-machine.herokuapp.com/machines/machine_requests', headers())
       .then(async (response) => {
         console.log(response.data.requests)
         if (response.status === 200) {
