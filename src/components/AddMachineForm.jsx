@@ -23,7 +23,7 @@ function AddForm(props) {
             machine_type: getValue('.machine-type'),
             machine_name: getValue('.machine-name'),
             model_name: getValue('.machine-model-name'),
-            location: getValue('.machine-location'),
+            location: getValue('.location'),
             price: getValue('.machine-price'),
             image: null,
             Terms_and_conditions: getValue('.terms-and-conditions'),
@@ -34,14 +34,14 @@ function AddForm(props) {
             tracker_sim: getValue('.machine-tracker-sim'),
             machine_make: getValue('.machine-make'),
             machine_number_plate: getValue('.machine-number-plate'),
-            location_lat: getValue('.machine-location-lat'),
-            location_lon: getValue('.machine-location-lon'),
+            location_lat: getValue('.latitude'),
+            location_lon: getValue('.longitude'),
         }
 
         await axios.post('https://ancher-machine.herokuapp.com/machines/create_machine/',
         {...newMachine},{ headers: {"Authorization" : `Bearer ${sessionStorage.getItem('amAccessToken')}`}, })
         .then( response => {
-            if(response.data.message == 'Machine created successfully') {
+            if(response.data.status === 201) {
                 toMachineList();
             }
             else {
@@ -54,8 +54,8 @@ function AddForm(props) {
 
     return (
         <div className='container'>
-            <form action="" className='container text-sm' autoComplete='off'>
-                <div className='font-medium my-5 uppercase text-lg text-[#2e4765]' style={{'border-bottom': '1px solid gray'}}>
+            <form onSubmit={ registerMachine } className='container text-sm' autoComplete='off'>
+                <div className='font-medium my-5 uppercase text-lg text-[#2e4765]' style={{'borderBottom': '1px solid gray'}}>
                     New Machine
                 </div>
 
@@ -64,21 +64,21 @@ function AddForm(props) {
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Machine Name
                         </span>
-                        <input type="text" name="email" className="machine-name mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine name" required />
+                        <input required type="text" name="email" className="machine-name mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine name" required />
                     </label>
 
                     <label className="block w-full">
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Model Name
                         </span>
-                        <input type="text" name="email" className="machine-model-name mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="machine model name" required />
+                        <input required type="text" name="email" className="machine-model-name mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="machine model name" required />
                     </label>
 
                     <label className="block w-full">
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Make
                         </span>
-                        <input type="text" name="email" className="machine-make mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine make" required />
+                        <input required type="text" name="email" className="machine-make mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine make" required />
                     </label>
                 </div>
 
@@ -87,21 +87,21 @@ function AddForm(props) {
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Type
                         </span>
-                        <input type="text" name="email" className="machine-type mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine type" required />
+                        <input required type="text" name="email" className="machine-type mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine type" required />
                     </label>
 
                     <label className="block w-full">
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Tracker type
                         </span>
-                        <input type="text" name="email" className="machine-tracker-type mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker type" required />
+                        <input required type="text" name="email" className="machine-tracker-type mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker type" required />
                     </label>
 
                     <label className="block w-full">
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Tracker IMEI
                         </span>
-                        <input type="text" name="email" className="machine-tracker-imei mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker IMEI" required />
+                        <input required type="text" name="email" className="machine-tracker-imei mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker IMEI" required />
                     </label>
                 </div>
 
@@ -110,21 +110,44 @@ function AddForm(props) {
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Tracker SIM
                         </span>
-                        <input type="text" name="email" className="machine-tracker-sim mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker SIM" required />
+                        <input required type="text" name="email" className="machine-tracker-sim mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine tracker SIM" required />
                     </label>
 
                     <label className="block w-full">
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Number plate
                         </span>
-                        <input type="text" name="email" className="machine-number-plate mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine number plate" required />
+                        <input required type="text" name="email" className="machine-number-plate mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Machine number plate" required />
                     </label>
 
                     <label className="block w-full">
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Log book
                         </span>
-                        <input type="text" name="email" className="machine-log-book mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Mahine log book" required />
+                        <input required type="text" name="email" className="machine-log-book mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Mahine log book" required />
+                    </label>
+                </div>
+
+                <div className='grid md:grid-cols-3 gap-4 my-4'>
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Location
+                        </span>
+                        <input required type="text" name="email" className="location mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Location" required />
+                    </label>
+
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Latitude
+                        </span>
+                        <input required type="text" name="email" className="latitude mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Latitude" required />
+                    </label>
+
+                    <label className="block w-full">
+                        <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                            Longitude
+                        </span>
+                        <input required type="text" name="email" className="longitude mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="Longitude" required />
                     </label>
                 </div>
 
@@ -133,7 +156,7 @@ function AddForm(props) {
                         <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                             Price
                         </span>
-                        <input type="text" name="email" className="machine-price mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="" required />
+                        <input required type="text" name="email" className="machine-price mt-1 px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-yellow-400 block w-full sm:text-sm focus:ring-1" placeholder="" required />
                     </label>
                 </div>
 
@@ -147,8 +170,7 @@ function AddForm(props) {
                 </div>
 
                 <div className='grid my-4'>
-                    <button type='submit'style={submit} className="bg-yellow-400 py-2.5 uppercase"
-                        onClick={ registerMachine }>
+                    <button type='submit'style={submit} className="bg-yellow-400 py-2.5 uppercase">
                         {loading ? 'Loading...' : 'Add Machine'}
                     </button>
                 </div>
@@ -156,21 +178,21 @@ function AddForm(props) {
                 {/* <div className="registration-form-row">
                     <div className="registration-form-item">
                         <label className="playfairdisplay-bold-black-15px">Machine Location <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter machine Location</small></span> </label>
-                        <input className='machine-location' type="text" name="" placeholder="Enter machine location" />
+                        <input required className='machine-location' type="text" name="" placeholder="Enter machine location" />
                     </div>
                 </div>
 
                 <div className="registration-form-row">
                     <div className="registration-form-item">
                         <label className="playfairdisplay-bold-black-15px">Location Latitude <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter machine Location Latitue</small></span> </label>
-                        <input className='machine-location-lat' type="text" name="" placeholder="Enter machine location latitude" />
+                        <input required className='machine-location-lat' type="text" name="" placeholder="Enter machine location latitude" />
                     </div>
                 </div>
 
                 <div className="registration-form-row">
                     <div className="registration-form-item">
                         <label className="playfairdisplay-bold-black-15px">Location Longitude <span><small style={{display: 'none',marginLeft: "5px", color: "crimson", fontSize: "12px"}}>Please enter machine Location Longitude</small></span> </label>
-                        <input className='machine-location-lon' type="text" name="" placeholder="Enter machine location longitude" />
+                        <input required className='machine-location-lon' type="text" name="" placeholder="Enter machine location longitude" />
                     </div>
                 </div> */}
 
