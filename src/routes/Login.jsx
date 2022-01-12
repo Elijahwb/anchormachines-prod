@@ -136,9 +136,9 @@ const Login = props => {
         <div className={showCredentialError} style={wrongCrendentialsStyles}>Wrong credentials!</div>
 
         <form action=''>
-            <label class="block my-4">
-              <span class="block text-sm font-medium text-gray-700">Email</span>
-              <input type="email" onInput={handleEmailInput} class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+            <label className="block my-4">
+              <span className="block text-sm font-medium text-gray-700">Email</span>
+              <input type="email" onInput={handleEmailInput} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
                 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-100
                 disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none
                 invalid:border-pink-500 invalid:text-pink-600
@@ -146,9 +146,9 @@ const Login = props => {
               "/>
             </label>
 
-            <label class="block my-4">
-              <span class="block text-sm font-medium text-gray-700">Password</span>
-              <input type="password" onInput={handlePasswordInput} class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+            <label className="block my-4">
+              <span className="block text-sm font-medium text-gray-700">Password</span>
+              <input type="password" onInput={handlePasswordInput} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
                 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-100
                 disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none
                 invalid:border-pink-500 invalid:text-pink-600

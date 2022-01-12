@@ -1,31 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+import { useLocation } from 'react-router-dom'
 
 // Importing the anchormachines logo
 import Logo from '../img/anchor-login.png';
 
 function SideBar(props) {
 
+    const [currentRoute, setCurrentRoute] = useState('') 
+
+    const location = useLocation()
+
+    useEffect(()=> {
+        console.log('location value')
+        console.log(props.location)
+    },)
+
+    function getCurrentRoute() {
+        setCurrentRoute(location.pathname.substring(1))
+    }
+
     let activeRouteDashboard = classNames({
         "text-yellow-400": true,
-        "active": props.activeRoute == 'dashboard',
+        "active": currentRoute === 'dashboard',
     })
     let activeRouteMachinery = classNames({
         "sidebar-link": true,
-        "active": props.activeRoute == 'machines',
+        "active": currentRoute === 'machines',
     })
     let activeRouteTransactions = classNames({
         "sidebar-link": true,
-        "active": props.activeRoute == 'transactions',
+        "active": currentRoute === 'transactions',
     })
     let activeRouteNotifications = classNames({
         "sidebar-link": true,
-        "active": props.activeRoute == 'notifications',
+        "active": currentRoute === 'notifications',
     })
     let activeRouteChat = classNames({
         "sidebar-link": true,
-        "active": props.activeRoute == 'chat',
+        "active": currentRoute === 'chat',
     })
     return (
         <section className='min-w-[200px] h-[100vh] text-white bg-black'>

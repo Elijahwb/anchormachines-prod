@@ -27,29 +27,31 @@ const MachineList = (props) =>{
     return (
         <div className='min-h-[83vh] w-full shadow-lg text-gray-700 rounded-t-md bg-white'>
             <table className='w-full overflow-x-auto rounded-t-md'>
-                <tr className='font-semibold border-gray-800 rounded-t-md' style={{'border-bottom': '1px solid gray', 'border-top': '1px solid gray'}}>
-                    {/* <td>Photo</td> */}
-                    <td className='py-3 pl-2'>Name</td>
-                    <td className='py-3'>Number plate</td>
-                    <td className='py-3'>Price</td>
-                    <td className='py-3'>Location</td>
-                    <td className='py-3'>Status</td>
-                </tr>
+                <tbody>
+                    <tr className='font-semibold border-gray-800 rounded-t-md' style={{'borderBottom': '1px solid gray', 'borderTop': '1px solid gray'}}>
+                        {/* <td>Photo</td> */}
+                        <td className='py-3 pl-2'>Name</td>
+                        <td className='py-3'>Number plate</td>
+                        <td className='py-3'>Price</td>
+                        <td className='py-3'>Location</td>
+                        <td className='py-3'>Status</td>
+                    </tr>
 
-                {
-                    allMachines.map((machine, index) => {
-                        return (
-                            <tr key={index} style={{'border-bottom': '1px solid #dfdbdb'}} className='cursor-pointer hover:shadow-md'>
-                                {/* <td className='pr-1'><img className='w-20 object-cover' src={sampleImage} alt='Machine'></img></td> */}
-                                <td className='py-4 pl-2'>{machine.machine_name ? machine.machine_name : 'NaN'}</td>
-                                <td className='py-4'>{machine.machine_number_plate ? machine.machine_number_plate: 'NaN'}</td>
-                                <td className='py-4'>UGX {machine.price} - Day</td>
-                                <td className='py-4'>{machine.location}</td>
-                                <td className='py-4'>Active</td>
-                            </tr>
-                        )
-                    })
-                }
+                    {
+                        allMachines.map((machine, index) => {
+                            return (
+                                <tr key={index} style={{'borderBottom': '1px solid #dfdbdb'}} className='cursor-pointer hover:shadow-md'>
+                                    {/* <td className='pr-1'><img className='w-20 object-cover' src={sampleImage} alt='Machine'></img></td> */}
+                                    <td className='py-4 pl-2'>{machine.machine_name ? machine.machine_name : 'NaN'}</td>
+                                    <td className='py-4'>{machine.machine_number_plate ? machine.machine_number_plate: 'NaN'}</td>
+                                    <td className='py-4'>UGX {machine.price} - Day</td>
+                                    <td className='py-4'>{machine.location}</td>
+                                    <td className='py-4'>Active</td>
+                                </tr>
+                            )
+                        })
+                    }
+                </tbody>
             </table>
         </div>
     );
